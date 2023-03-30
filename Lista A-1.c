@@ -11,8 +11,8 @@ int main() {
     KB = MB*1024;
     GB = MB/1024;
 
-    printf("\nQuantidade em Megabytes (B): %.0lf", B);
-    printf("\nQuantidade em Megabytes (KB): %.0lf", KB);
+    printf("Quantidade em Bytes (B): %.0lf", B);
+    printf("\nQuantidade em Kilobytes (KB): %.0lf", KB);
     printf("\nQuantidade em Gigabytes (GB): %lf", GB);
 
     return 0;

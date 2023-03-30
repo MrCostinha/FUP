@@ -13,6 +13,6 @@ int main() {
 
     media = (n1*p1+n2*p2+n3*p3)/(p1+p2+p3);
 
-    printf("A média das notas é: %.2f", media);
+    printf("A média ponderada das notas é: %.2f", media);
     return 0;
 }
