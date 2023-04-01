@@ -3,12 +3,10 @@
 int main() {
     int horas, minutos, segundos;
 
-    printf("Primeiro, insira o tempo da receita em horas: ");
-    scanf("%d", &horas);
-    printf("Agora, o tempo restante em minutos: ");
-    scanf("%d", &minutos);
+    printf("Insira o tempo da receita em horas e minutos (00h 00m): ");
+    scanf("%d%d", &horas, &minutos);
 
-    segundos = horas*36000 + minutos*60;
-    printf("O tempo da receita em segundos é: %d", segundos);
+    segundos = horas*3600 + minutos*60;
+    printf("Tempo da receita em segundos: %d", segundos);
     return 0;
 }
