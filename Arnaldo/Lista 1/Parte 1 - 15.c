@@ -3,7 +3,7 @@
 int main() {
     int codigo, calorias;
 
-    printf("Escolha um prato: \n\t1 - Vegetariano\n\t2 - Peixe\n\t3 - Frango\n\t4 - Carne\n");
+    printf("Prato: \n\t1 - Vegetariano\n\t2 - Peixe\n\t3 - Frango\n\t4 - Carne\n");
     scanf("%d", &codigo);
     
     if (codigo==1) {
@@ -22,7 +22,7 @@ int main() {
         printf("\nCódigo inválido!");
     }
 
-    printf("\nEscolha uma sobremesa: \n\t1 - Abacaxi\n\t2 - Sorvete diet\n\t3 - Mouse diet\n\t4 - Mouse chocolate\n");
+    printf("\nSobremesa: \n\t1 - Abacaxi\n\t2 - Sorvete diet\n\t3 - Mouse diet\n\t4 - Mouse chocolate\n");
     scanf("%d", &codigo);
     
     if (codigo==1) {
@@ -41,7 +41,7 @@ int main() {
         printf("\nCódigo inválido!");
     }
    
-    printf("\nEscolha uma bebida: \n\t1 - Chá\n\t2 - Suco de laranja\n\t3 - Suco de melão\n\t4 - Refrigerante diet\n");
+    printf("\nBebida: \n\t1 - Chá\n\t2 - Suco de laranja\n\t3 - Suco de melão\n\t4 - Refrigerante diet\n");
     scanf("%d", &codigo);
     
     if (codigo==1) {

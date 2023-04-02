@@ -6,7 +6,7 @@ int main() {
 
     printf("Preço atual: R$ ");
     scanf("%f", &preco);
-    printf("\nDigite: 1 --> Aumentar o preço\n\t2 --> Diminuir o preço\n");
+    printf("\nDigite: \n\t1 - Aumentar o preço\t|\t2 - Diminuir o preço\n");
     scanf("%d", &codigo);
     printf("\nPorcentagem do acréscimo ou decréscimo: ");
     scanf("%f", &acres_decres);

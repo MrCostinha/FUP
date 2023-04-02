@@ -4,11 +4,11 @@
 int main() {
     float raio, area;
 
-    printf("Insira o valor do raio do círculo (m): ");
+    printf("Raio do círculo (m): ");
     scanf("%f", &raio);
 
     area = pi * (raio*raio);
 
-    printf("A área do círculo é: %.4fm²", area);
+    printf("Área do círculo: %.4fm²", area);
     return 0;
 }

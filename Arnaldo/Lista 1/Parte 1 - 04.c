@@ -8,11 +8,8 @@ int main() {
 
     diferenca = num1-num2;
 
-    if (diferenca >= 0) {
-        return diferenca;
-    }
-    else {
-        diferenca = diferenca * (-1);
+    if (diferenca>=0) {
+        diferenca *= -1;
     }
 
     printf("Valor absoluto da diferença entre os números: %d", diferenca);

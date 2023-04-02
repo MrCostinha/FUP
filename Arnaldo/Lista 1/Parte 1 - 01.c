@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    double B, KB, MB;
-    double GB;
+    double B, KB, MB, GB;
 
     printf("Quantidade em Megabytes (MB): ");
     scanf("%lf", &MB);
@@ -12,8 +11,8 @@ int main() {
     GB = MB/1024;
 
     printf("Quantidade em Bytes (B): %.0lf", B);
-    printf("\nQuantidade em Kilobytes (KB): %.0lf", KB);
-    printf("\nQuantidade em Gigabytes (GB): %lf", GB);
+    printf("Quantidade em Kilobytes (KB): %.0lf", KB);
+    printf("Quantidade em Gigabytes (GB): %lf", GB);
 
     return 0;
 }

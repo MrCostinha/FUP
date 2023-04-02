@@ -1,16 +1,15 @@
 #include <stdio.h>
 
 int main() {
-    int dia_nascimento, mes_nascimento, ano_nascimento, qtd_dias_nascimento, qtd_dias_atual, idade;
+    int dia, mes, ano, qtd_dias, idade;
 
-    printf("Insira data de nascimento (dd/mm/aa): \n");
-    scanf("%d%d%d", &dia_nascimento, &mes_nascimento, &ano_nascimento);
+    printf("Data de nascimento (dd/mm/aa): ");
+    scanf("%d%d%d", &dia, &mes, &ano);
 
-    qtd_dias_atual = 2023*360 + 3*30 + 31;
-    qtd_dias_nascimento = ano_nascimento*360 + mes_nascimento*30 + dia_nascimento;
-    idade = qtd_dias_atual - qtd_dias_nascimento;
+    qtd_dias = ano*360 + mes*30 + dia;
+    idade = (2023*360 + 4*30 + 02) - qtd_dias;
     
-    idade = idade/360;
+    idade /= 360;
 
     printf("Idade em anos = %d", idade);
 

@@ -3,7 +3,7 @@
 int main() {
     int angulo;
 
-    printf("Informe o ângulo em graus: ");
+    printf("Ângulo em graus: ");
     scanf("%d", &angulo);
 
     if (angulo>360) {
