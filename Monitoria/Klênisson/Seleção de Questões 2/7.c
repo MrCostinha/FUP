@@ -19,7 +19,7 @@ int main() {
             scanf("%f", &porcentagem);
             
             porcentagem /= 100;
-            preco *= (porcentagem+1);
+            preco *= (1+porcentagem);
 
             wprintf(L"\nNovo preço: R$ %.2f", preco);
             break;
@@ -29,7 +29,7 @@ int main() {
             scanf("%f", &porcentagem);
 
             porcentagem /= 100;
-            preco *= (porcentagem-1);
+            preco *= (1-porcentagem);
 
             wprintf(L"\nNovo preço: R$ %.2f", preco);
             break;
