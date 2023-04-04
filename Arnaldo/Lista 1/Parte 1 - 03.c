@@ -1,6 +1,10 @@
 #include <stdio.h>
+#include <wchar.h>
+#include <locale.h>
 
 int main() {
+    setlocale(LC_ALL, "");
+    
     float n1, n2, n3, p1, p2, p3, media;
 
     printf("1ª nota e seu peso: ");
@@ -12,7 +16,7 @@ int main() {
 
     media = (n1*p1 + n2*p2 + n3*p3) / (p1+p2+p3);
 
-    printf("\nMédia ponderada das notas: %.2f", media);
+    wprintf(L"\nMédia ponderada das notas: %.2f", media);
 
     return 0;
 }

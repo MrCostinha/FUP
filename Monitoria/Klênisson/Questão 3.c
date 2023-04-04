@@ -1,6 +1,10 @@
 #include <stdio.h>
+#include <wchar.h>
+#include <locale.h>
 
 int main() {
+    setlocale(LC_ALL, "");
+    
     float real, dollar;
 
     printf("Valor em reais: R$ ");
@@ -8,6 +12,6 @@ int main() {
 
     dollar = real/5.06;
 
-    printf("Valor convertido em dólares: USD %.2f", dollar);
+    wprintf(L"Valor convertido em dólar: USD %.2f", dollar);
     return 0;
 }

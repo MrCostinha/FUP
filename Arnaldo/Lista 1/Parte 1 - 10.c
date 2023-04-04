@@ -1,6 +1,10 @@
 #include <stdio.h>
+#include <wchar.h>
+#include <locale.h>
 
 int main() {
+    setlocale(LC_ALL, "");
+    
     int menu, horas, minutos;
     float horas_convertidas, minutos_convertidos, segundos;
 
@@ -11,7 +15,7 @@ int main() {
     minutos_convertidos = segundos/60;
     horas_convertidas = segundos/3600;
 
-    printf("\nConversão para: \n\t1 - segundos\n\t2 - minutos\n\t3 - horas\n");
+    wprintf(L"\nConversão para: \n\t1 - segundos\n\t2 - minutos\n\t3 - horas\n");
     scanf("%d", &menu);
 
     if (menu==1) {
@@ -24,7 +28,7 @@ int main() {
         printf("\nTempo da receita em horas: %.2f", horas_convertidas);
     }
     else {
-        printf("\nOpção inválida!");
+        wprintf(L"\nOpção inválida!");
     }
 
     return 0;

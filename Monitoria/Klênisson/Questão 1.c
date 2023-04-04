@@ -1,6 +1,10 @@
 #include <stdio.h>
+#include <wchar.h>
+#include <locale.h>
 
 int main() {
+    setlocale(LC_ALL, "");
+    
     float n1, n2, n3, n4, media;
 
     printf("1ª nota: ");
@@ -14,6 +18,6 @@ int main() {
 
     media = (n1+n2+n3+n4)/4;
 
-    printf("\nMédia das notas: %.2f", media);
+    wprintf(L"\nMédia das notas: %.2f", media);
     return 0;
 }

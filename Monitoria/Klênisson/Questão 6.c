@@ -1,9 +1,13 @@
 #include <stdio.h>
+#include <wchar.h>
+#include <locale.h>
 
 int main() {
+    setlocale(LC_ALL, "");
+    
     int x, soma;
 
-    printf("Número inteiro de 3 dígitos (000): ");
+    wprintf(L"Número inteiro de 3 dígitos (000): ");
     scanf("%d", &x);
 
     soma = x%10;

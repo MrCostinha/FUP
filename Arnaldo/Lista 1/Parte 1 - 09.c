@@ -3,7 +3,7 @@
 int main() {
     int notas_200, notas_100, notas_50, notas_20, notas_10, notas_5, notas_2, notas_1;
 
-    printf("notas_1 em reais: R$ ");
+    printf("Valor em reais: R$ ");
     scanf("%d", &notas_1);
 
     notas_200 = notas_1/200;

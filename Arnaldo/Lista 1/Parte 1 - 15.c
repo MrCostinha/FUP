@@ -1,6 +1,10 @@
 #include <stdio.h>
+#include <wchar.h>
+#include <locale.h>
 
 int main() {
+    setlocale(LC_ALL, "");
+    
     int codigo, calorias;
 
     printf("Prato: \n\t1 - Vegetariano\n\t2 - Peixe\n\t3 - Frango\n\t4 - Carne\n");
@@ -19,7 +23,7 @@ int main() {
         calorias = 350;
     }
     else {
-        printf("\nCódigo inválido!");
+        wprintf(L"\nCódigo inválido!");
     }
 
     printf("\nSobremesa: \n\t1 - Abacaxi\n\t2 - Sorvete diet\n\t3 - Mouse diet\n\t4 - Mouse chocolate\n");
@@ -38,10 +42,10 @@ int main() {
         calorias += 200;
     }
     else {
-        printf("\nCódigo inválido!");
+        wprintf(L"\nCódigo inválido!");
     }
    
-    printf("\nBebida: \n\t1 - Chá\n\t2 - Suco de laranja\n\t3 - Suco de melão\n\t4 - Refrigerante diet\n");
+    wprintf(L"\nBebida: \n\t1 - Chá\n\t2 - Suco de laranja\n\t3 - Suco de melão\n\t4 - Refrigerante diet\n");
     scanf("%d", &codigo);
     
     if (codigo==1) {
@@ -57,7 +61,7 @@ int main() {
         calorias += 65;
     }
     else {
-        printf("\nCódigo inválido!");
+        wprintf(L"\nCódigo inválido!");
     }
 
     printf("\nTotal de calorias: %d cal", calorias);

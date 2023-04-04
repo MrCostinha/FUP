@@ -3,7 +3,7 @@
 int main() {
     int dia, mes, ano, qtd_dias, idade;
 
-    printf("Data de nascimento (dd/mm/aa): ");
+    printf("Data de nascimento (dd/mm/aaaa): ");
     scanf("%d%d%d", &dia, &mes, &ano);
 
     qtd_dias = ano*360 + mes*30 + dia;

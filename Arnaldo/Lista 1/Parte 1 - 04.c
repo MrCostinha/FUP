@@ -1,9 +1,13 @@
 #include <stdio.h>
+#include <wchar.h>
+#include <locale.h>
 
 int main() {
+    setlocale(LC_ALL, "");
+    
     int num1, num2, diferenca;
 
-    printf("Insira dois números: \n");
+    wprintf(L"Insira dois números: \n");
     scanf("%d%d", &num1, &num2);
 
     diferenca = num1-num2;
@@ -12,7 +16,7 @@ int main() {
         diferenca *= -1;
     }
 
-    printf("Valor absoluto da diferença entre os números: %d", diferenca);
+    wprintf(L"Valor absoluto da diferença entre os números: %d", diferenca);
 
     return 0;
 }

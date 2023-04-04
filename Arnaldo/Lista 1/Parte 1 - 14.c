@@ -1,32 +1,36 @@
 #include <stdio.h>
+#include <wchar.h>
+#include <locale.h>
 
 int main() {
-    float preco, acres_decres;
+    setlocale(LC_ALL, "");
+    
+    float preco, porcentagem;
     int codigo;
 
-    printf("Preço atual: R$ ");
+    wprintf(L"Preço atual: R$ ");
     scanf("%f", &preco);
-    printf("\nDigite: \n\t1 - Aumentar o preço\t|\t2 - Diminuir o preço\n");
+    wprintf(L"\nDigite: \n\t1 - Aumentar o preço\t|\t2 - Diminuir o preço\n");
     scanf("%d", &codigo);
-    printf("\nPorcentagem do acréscimo ou decréscimo: ");
-    scanf("%f", &acres_decres);
+    wprintf(L"\nPorcentagem do acréscimo ou decréscimo: ");
+    scanf("%f", &porcentagem);
 
-    acres_decres /= 100;
+    porcentagem /= 100;
 
     if (codigo==1) {
-        acres_decres *= preco;
-        preco += acres_decres;
+        porcentagem *= preco;
+        preco += porcentagem;
 
-        printf("\nNovo preço: R$ %.2f", preco);
+        wprintf(L"\nNovo preço: R$ %.2f", preco);
     }
     else if (codigo==2) {
-        acres_decres *= preco*(-1);
-        preco += acres_decres;
+        porcentagem *= -preco;
+        preco += porcentagem;
 
-        printf("\nNovo preço: R$ %.2f", preco);
+        wprintf(L"\nNovo preço: R$ %.2f", preco);
     }
     else {
-        printf("\nCódigo inválido!");
+        wprintf(L"\nCódigo inválido!");
     }
 
     return 0;
