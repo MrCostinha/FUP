@@ -36,6 +36,7 @@ int main() {
 
         default:
             wprintf(L"\nCódigo inválido!");
+            return 1;
     }
 
     return 0;
