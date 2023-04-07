@@ -1,6 +1,10 @@
 #include <stdio.h>
+#include <wchar.h>
+#include <locale.h>
 
 int main() {
+    setlocale(LC_ALL, "");
+    
     double B, KB, MB, GB;
 
     printf("Quantidade em Megabytes (MB): ");

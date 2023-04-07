@@ -1,6 +1,10 @@
 #include <stdio.h>
+#include <wchar.h>
+#include <locale.h>
 
-int main(){
+int main() {
+    setlocale(LC_ALL, "");
+
     float C, F;
 
     printf("Temperatura em graus Celsius: ");

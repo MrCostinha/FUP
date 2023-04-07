@@ -1,6 +1,10 @@
 #include <stdio.h>
+#include <wchar.h>
+#include <locale.h>
 
 int main() {
+    setlocale(LC_ALL, "");
+
     int notas_200, notas_100, notas_50, notas_20, notas_10, notas_5, notas_2, notas_1;
 
     printf("Valor em reais: R$ ");

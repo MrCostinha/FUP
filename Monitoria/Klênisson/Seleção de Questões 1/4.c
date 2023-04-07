@@ -1,6 +1,10 @@
 #include <stdio.h>
+#include <wchar.h>
+#include <locale.h>
 
 int main() {
+    setlocale(LC_ALL, "");
+
     int horas, minutos, segundos;
 
     printf("Insira o tempo da receita em horas e minutos (00h 00m): ");

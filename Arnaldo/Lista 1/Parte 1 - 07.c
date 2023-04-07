@@ -1,6 +1,10 @@
 #include <stdio.h>
+#include <wchar.h>
+#include <locale.h>
 
 int main() {
+    setlocale(LC_ALL, "");
+
     int dia_n, mes_n, ano_n, qtd_dias_n, idade_anos, idade_meses, idade_dias;
 
     printf("Data de nascimento (dd/mm/aaaa): ");

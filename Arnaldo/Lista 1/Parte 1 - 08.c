@@ -1,6 +1,10 @@
 #include <stdio.h>
+#include <wchar.h>
+#include <locale.h>
 
 int main() {
+    setlocale(LC_ALL, "");
+
     int dia_nascimento, mes_nascimento, ano_nascimento, qtd_dias_nascimento, dia_atual, mes_atual, ano_atual, qtd_dias_atual, idade_anos, idade_meses, idade_dias;
 
     printf("Data atual (dd/mm/aaaa): \n");
