@@ -13,7 +13,9 @@ int main() {
 
     if (angulo>360 || angulo<-360) {
         int voltas = angulo/360;
-        if (voltas<0) {voltas *= -1;}
+        if (voltas<0) {
+            voltas *= -1;
+        }
         
         wprintf(L"Voltas completadas pelo ângulo: %d\n", voltas);
 
