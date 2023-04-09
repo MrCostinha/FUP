@@ -7,7 +7,7 @@ int main() {
     
     int numero_natural, numero_invertido;
 
-    wprintf(L"Número natural de 3 dígitos (100-999): ");
+    wprintf(L"Número natural de 3 dígitos: ");
     scanf("%d", &numero_natural);
 
     numero_invertido = (numero_natural%10) * 100;
@@ -16,7 +16,7 @@ int main() {
     numero_natural /= 10;
     numero_invertido += numero_natural%10;
 
-    printf("Número invertido: %d", numero_invertido);
+    printf("Número invertido: %.3d", numero_invertido);
 
     return 0;
 }

@@ -7,7 +7,7 @@ int main() {
 
     int numero_1, numero_2;
 
-    wprintf(L"Insira 2 núreos: ");
+    wprintf(L"Insira 2 números: ");
     scanf("%d%d", &numero_1, &numero_2);
 
     if (numero_1>numero_2) {

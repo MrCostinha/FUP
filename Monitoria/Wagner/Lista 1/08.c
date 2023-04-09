@@ -10,7 +10,7 @@ int main() {
     wprintf(L"Insira 3 notas: ");
     scanf("%f%f%f", &nota_1, &nota_2, &nota_3);
 
-    media = (nota_1+nota_2+nota_3) / 3;
+    media = (nota_1+nota_2+nota_3) / 3.0;
 
     if (media>=7) {
         printf("Aluno Aprovado");

@@ -16,7 +16,7 @@ int main() {
     perimetro_roda = 2*pi*raio_roda;
     distancia = perimetro_roda*voltas_roda;
 
-    wprintf(L"\nDistância percorrida: %.3f m", distancia/100);
+    wprintf(L"\nDistância percorrida: %.3fm", distancia/100);
     
     return 0;
 }

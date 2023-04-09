@@ -31,20 +31,20 @@ int main() {
     scanf("%d", &codigo);
     
     switch (codigo) {
-    case 1:
-        calorias += 75;
-        break;
-    case 2:
-        calorias += 110;
-        break;
-    case 3:
-        calorias += 170;
-        break;
-    case 4:
-        calorias += 200;
-        break;
-    default:
-        wprintf(L"\nCódigo inválido!");
+        case 1:
+            calorias += 75;
+            break;
+        case 2:
+            calorias += 110;
+            break;
+        case 3:
+            calorias += 170;
+            break;
+        case 4:
+            calorias += 200;
+            break;
+        default:
+            wprintf(L"\nCódigo inválido!");
     }
    
     wprintf(L"\nBebida: \n\t1 - Chá\n\t2 - Suco de laranja\n\t3 - Suco de melão\n\t4 - Refrigerante diet\n");
