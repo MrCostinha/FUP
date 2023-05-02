@@ -16,15 +16,16 @@ int main() {
             maior = x;
             menor = x;
         }
-        if (x!=0) {
-            if (x>=maior) {
-                maior = x;
-            }
-            else if (x<=menor) {
-                menor = x;
-            }
+        if (x==0) {
+            break;
         }
-    } while (x!=0);
+        if (x>=maior) {
+            maior = x;
+        }
+        else if (x<=menor) {
+            menor = x;
+        }
+    } while (x != 0);
 
     wprintf(L"Maior: %d\nMenor: %d", maior, menor);
 
