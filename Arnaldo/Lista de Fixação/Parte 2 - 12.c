@@ -4,18 +4,18 @@
 
 int main() {
     setlocale(LC_ALL, "");
-    
-    int numero, count = 0;
 
+    int numero, divisores = 0;
     wprintf(L"Número inteiro: ");
     scanf("%d", &numero);
 
-    while (numero > 0) {
-        numero /= 10;
-        count++;
+    for (int i = 1; i <= numero; i++) {
+        if(numero%i == 0) {
+            divisores++;
+        }
     }
     
-    printf("Algarismos: %d", count);
+    printf("Divisores: %d", divisores);
 
     return 0;
 }
