@@ -5,18 +5,17 @@
 int main() {
     setlocale(LC_ALL, "");
     
-    int x, soma;
+    int numero, count = 0;
 
-    wprintf(L"Número inteiro de 3 dígitos (000): ");
-    scanf("%d", &x);
+    wprintf(L"Número inteiro: ");
+    scanf("%d", &numero);
 
-    soma = x%10;
-    x /= 10;
-    soma += x%10;
-    x /= 10;
-    soma += x%1000;
-
-    printf("Soma dos algarismos: %d", soma);
+    for (int i = 0; numero > 0; i++) {
+        numero /= 10;
+        count++;
+    }
+    
+    printf("Algarismos: %d", count);
 
     return 0;
 }
