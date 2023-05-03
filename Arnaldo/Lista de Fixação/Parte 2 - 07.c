@@ -20,7 +20,7 @@ int main() {
         }
         if (x!=0) {
             if (x>maior_1) {
-                maior_2 = 1;
+                maior_2 = maior_1;
                 maior_1 = x;
             }
             else if (x>maior_2) {
@@ -30,13 +30,13 @@ int main() {
                 menor_2 = menor_1;
                 menor_1 = x;
             }
-            else if (menor_1>menor_2) {
+            else if (x<menor_2) {
                 menor_2 = x;
             }
         }
     } while (x!=0);
 
-    wprintf(L"Maior: %d\tMenor: %d\nSegundo Maior: %d\tSegundo Menor: %d", maior_1, menor_1, maior_2, menor_2);
+    wprintf(L"Maior: %d\tSegundo Maior: %d\nMenor: %d\tSegundo Menor: %d", maior_1, maior_2, menor_1, menor_2);
 
     return 0;
 }
