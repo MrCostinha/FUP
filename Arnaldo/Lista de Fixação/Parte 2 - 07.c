@@ -5,14 +5,14 @@
 int main() {
     setlocale(LC_ALL, "");
 
-    int x, maior_1, maior_2, menor_1, menor_2, cont = 0;
+    int x, maior_1, maior_2, menor_1, menor_2, count = 0;
 
     wprintf(L"Números inteiros: \n");
     
     do {
-        cont++;
+        count++;
         scanf("%d", &x);
-        if (cont==1) {
+        if (count==1) {
                 maior_1 = x;
                 maior_2 = x;
                 menor_1 = x;
