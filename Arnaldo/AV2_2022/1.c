@@ -6,15 +6,16 @@ como consertá-lo.*/
 #include <stdlib.h>
 #include <time.h>
 
-void main() {
+int main() {
     srand(time(NULL));
     char x, resp;
-    x = rand()%26+’A’;
+    x = rand()%26+'A';
     printf("Sorteei uma letra maiuscula. Qual o seu palpite?\n");
     scanf("%c", &resp);
-    while (resp == x) {
+    while (resp != x) {
         printf("\nErrou. Outro palpite?\n");
-        scanf("%c", &x);
+        scanf("%c", &resp);
     }
     printf("Acertou!! Ate a proxima!");
+    return 0;
 }
