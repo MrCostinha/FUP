@@ -10,7 +10,7 @@ int main() {
 
     int x, maior, menor, digito;
 
-    wprintf(L"Digite um número inteiro positivo: ");
+    wprintf(L"Digite um número natural: ");
     scanf("%d", &x);
     
     maior = x%10;
