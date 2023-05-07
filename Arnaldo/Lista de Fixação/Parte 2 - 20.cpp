@@ -1,11 +1,10 @@
-#include <stdio.h>
-#include <wchar.h>
-#include <locale.h>
-#include <stdlib.h>
-#include <time.h>
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
 
 int main() {
-    setlocale(LC_ALL, "");
     srand(time(NULL));
 
     int numero, caras = 0, coroas = 0;
@@ -14,13 +13,12 @@ int main() {
         numero = rand()%2;
         if (numero==0) {
             caras++;
-        }
-        else {
+        } else {
             coroas++;
         }
     }
 
-    wprintf(L"\n%d caras e %d coroas", caras, coroas);
+    cout << caras << " caras e " << coroas << " coroas";
 
     return 0;
 }
