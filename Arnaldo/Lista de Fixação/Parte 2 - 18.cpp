@@ -18,20 +18,17 @@ int main() {
     int cartela[qtd_numeros];
 
     for (int i = 0; i < qtd_numeros; i++) {
-        bool repetido;
+        cartela[i] = rand()%51;
 
-        do {
-            repetido = false;
-            cartela[i] = rand()%51;
-
-            for (int j = 0; j < i; j++) {
-                if (cartela[i] == cartela[j]) {
-                    repetido = true;
-                    break;
-                }
+        for (int j = 0; j < i; j++) {
+            if (cartela[i] == cartela[j]) {
+                i--;
+                break;
             }
-        } while (repetido);
+        }
     }
+
+    wcout << L"Cartela de Bingo: ";
 
     for (int j = 0; j < qtd_numeros; j++) {
         cout << cartela[j] << " ";
