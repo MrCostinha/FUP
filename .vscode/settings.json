@@ -1,7 +1,8 @@
 {
     "files.associations": {
         "stdio.h": "c",
-        "locale.h": "c"
+        "locale.h": "c",
+        "iostream": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
