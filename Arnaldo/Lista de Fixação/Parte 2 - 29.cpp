@@ -26,8 +26,7 @@ int main() {
                 } else {
                     cout << "  ";
                 }
-            }
-            if (coluna >= meio) {
+            } else if (coluna > meio) {
                 if (count > 0) {
                     cout << "* ";
                     count--;
@@ -39,7 +38,6 @@ int main() {
         } else {
             aux++;
         }
-        
         cout << endl;
         count = 0;
     }
