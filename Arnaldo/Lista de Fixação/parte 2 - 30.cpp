@@ -16,8 +16,8 @@ int main() {
 
     for (int linha = 1; linha <= n; linha++) {
         for (int coluna = 1; coluna <= n; coluna++) {
-            if (coluna >= aux && coluna <= n-aux + 1) {
-                    cout << "* ";
+            if (coluna == aux || coluna == n-aux + 1) {
+                cout << "* ";
             } else {
                 cout << "  ";
             }
