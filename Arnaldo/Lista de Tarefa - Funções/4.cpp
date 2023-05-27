@@ -14,10 +14,10 @@ bool ehPrimo(int x){
             divisores++;
         }
     }
-    if (divisores == 0) {
-        return true;
-    } else {
+    if (divisores != 0 || x < 2) {
         return false;
+    } else {
+        return true;
     }
 }
 
