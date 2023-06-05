@@ -12,7 +12,7 @@ int main() {
 
     diferenca = num1-num2;
 
-    if (diferenca>=0) {
+    if (diferenca<0) {
         diferenca *= -1;
     }
 
