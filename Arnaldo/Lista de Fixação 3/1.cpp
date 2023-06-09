@@ -1,32 +1,28 @@
 #include <iostream>
-#include <wchar.h>  // Caracteres
-#include <locale.h> // em pt-br
+#include <wchar.h>
+#include <locale.h>
 
 using namespace std;
-
-void trocaEndereco(int* endereco1, int* endereco2) {
-    int aux = *endereco1;
-
-    *endereco1 = *endereco2;
-    *endereco2 = aux;
-}
 
 int main() {
     setlocale(LC_ALL, "");
 
-    int numero1, numero2;
+    int acimaMedia = 0;
+    float notas[20], soma = 0, media;
 
-    int* ptr1 = &numero1;
-    int* ptr2 = &numero2;
+    for (int i = 0; i < 20; i++) {
+        cout << "Insira a nota do aluno " << i + 1 << ": ";
+        cin >> notas[i];
+        if (notas[i] >= 7) {
+            acimaMedia++;
+        }
+        soma += notas[i];
+    }
 
-    cout << "Insira 2 inteiros: ";
-    cin >> numero1 >> numero2;
+    media = soma/20.0;
 
-    wcout << L"Valores iniciais: " << *ptr1 << ", " << *ptr2 << endl;
-
-    trocaEndereco(ptr1, ptr2);
-
-    wcout << L"Valores após a troca: " << *ptr1 << ", " << *ptr2 << endl;
+    wcout << L"Média da turma: " << media << endl;
+    wcout << L"Alunos acima da média: " << acimaMedia << endl;
 
     return 0;
 }
