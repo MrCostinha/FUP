@@ -136,6 +136,8 @@ int main() {
                 cin >> chute_palavra;
                 verificaPalavra(palavra[tema_sort][palavra_sort], progresso, chute_palavra, erros);
                 break;
+            default:
+                cout << "Opção Inválida!";
         }
         printChutes(chutes);
 
