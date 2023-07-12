@@ -7,6 +7,10 @@
 
 using namespace std;
 
+struct tema {
+    vector<string> palavra;
+};
+
 void printProgresso(string& progresso) {
     for (int i = 0; i < progresso.size(); i++) {
         if (progresso[i] == ' ') {
@@ -98,22 +102,46 @@ void printStatus(int erros){
 int main() {
     srand(time(NULL));
 
-    string tema[3] = {"frutas", "animais", "cores"};
-    string palavra[3][3] = {
-        {"banana", "uva", "laranja"},
-        {"cachorro", "gato", "papagaio"},
-        {"azul", "vermelho", "amarelo"}
-    };
-    int tema_sort = rand()%3;
-    int palavra_sort = rand()%3;
-
-    int erros = 0;
+    tema frutas, animais, cores;
+    frutas.palavra = {"abacaxi", "jaca", "acerola", "melancia", "banana", "uva", "laranja"};
+    animais.palavra = {"cachorro", "gato", "jabuti", "coelho", "tucano", "papagaio"};
+    cores.palavra = {"laranja", "verde", "preto", "branco", "azul", "vermelho", "amarelo"};
+    
     vector<char> chutes;
-    string progresso(palavra[tema_sort][palavra_sort].size(), ' ');
+    int erros = 0;
+
+    int temaSorteado = rand()%3;
+    string palavraSorteada;
+
+    switch (temaSorteado) {
+        case 0:
+            palavraSorteada = frutas.palavra[rand()%frutas.palavra.size()];
+            break;
+        case 1:
+            palavraSorteada = animais.palavra[rand()%animais.palavra.size()];
+            break;
+        case 2:
+            palavraSorteada = cores.palavra[rand()%cores.palavra.size()];
+            break;
+    }
+
+    string progresso(palavraSorteada.size(), ' ');
 
     cout << "Bem-Vindo ao Jogo da Forca!" << endl;
-    cout << "Tema: " << tema[tema_sort] << endl;
-    cout << palavra[tema_sort][palavra_sort].size() << " letras" << endl;
+
+    switch (temaSorteado) {
+        case 0:
+            cout << "Tema: Frutas" << endl;
+            break;
+        case 1:
+            cout << "Tema: Animais" << endl;
+            break;
+        case 2:
+            cout << "Tema: Cores" << endl;
+            break;
+    }
+
+    cout << palavraSorteada.size() << " letras" << endl;
 
     while(erros < 6) {
         char opcao;
@@ -129,12 +157,12 @@ int main() {
         switch(opcao) {
             case 'l':
                 chute_letra = chutarLetra(chutes);
-                verificaLetra(palavra[tema_sort][palavra_sort], progresso, chute_letra, erros);
+                verificaLetra(palavraSorteada, progresso, chute_letra, erros);
                 break;
             case 'p':
                 cout << "Palavra: ";
                 cin >> chute_palavra;
-                verificaPalavra(palavra[tema_sort][palavra_sort], progresso, chute_palavra, erros);
+                verificaPalavra(palavraSorteada, progresso, chute_palavra, erros);
                 break;
             default:
                 cout << "Opção Inválida!";
@@ -143,11 +171,11 @@ int main() {
 
         printStatus(erros);
 
-        if (progresso == palavra[tema_sort][palavra_sort]) {
-            cout << "Parabéns! Você acertou a palavra: " << palavra[tema_sort][palavra_sort] << endl;
+        if (progresso == palavraSorteada) {
+            cout << "Parabéns! Você acertou a palavra: " << palavraSorteada << endl;
             break;
         } else if (erros == 6) {
-            cout << "Você perdeu! A palavra era: " << palavra[tema_sort][palavra_sort] << endl;
+            cout << "Você perdeu! A palavra era: " << palavraSorteada << endl;
             break;
         }
     }
