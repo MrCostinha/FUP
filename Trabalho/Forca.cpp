@@ -1,9 +1,9 @@
 #include <iostream>
-#include <string>
 #include <cstdlib>
 #include <ctime>
+#include <string>
 #include <vector>
-#include <algorithm> // find
+#include <algorithm>
 
 using namespace std;
 
