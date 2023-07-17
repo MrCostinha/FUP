@@ -1,13 +1,13 @@
 #include <iostream>
+#include <clocale>
 #include <cwchar>
-#include <locale.h>
 #include <cstdlib>
 #include <ctime>
 
 using namespace std;
 
 int main() {
-    setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "Portuguese-Brazilian");
     srand(time(NULL));
 
     int x = rand()%30+1;

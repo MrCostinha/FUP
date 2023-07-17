@@ -1,9 +1,9 @@
 #include <stdio.h>
-#include <wchar.h>
 #include <locale.h>
+#include <wchar.h>
 
 int main() {
-    setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "Portuguese-Brazilian");
     
     float a, b, c;
 
@@ -15,28 +15,23 @@ int main() {
 
         if (b<c) {
             wprintf(L"O 2º objeto é o menos pesado\n");
-        }
-        else {
+        } else {
             wprintf(L"O 3º objeto é o menos pesado\n");
         }
-    }
-    else if (b>a && b>c) {
+    } else if (b>a && b>c) {
         wprintf(L"\nO 2º objeto é o mais pesado\n");
 
         if (a<c) {
             wprintf(L"O 1º objeto é o menos pesado\n");
-        }
-        else {
+        } else {
             wprintf(L"O 3º objeto é o menos pesado\n");
         }
-    }
-    else {
+    } else {
         wprintf(L"\nO 3º objeto é o mais pesado\n");
 
         if (a<b) {
             wprintf(L"O 1º objeto é o menos pesado\n");
-        }
-        else {
+        } else {
             wprintf(L"O 2º objeto é o menos pesado\n");
         }
     }

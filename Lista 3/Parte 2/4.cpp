@@ -1,11 +1,11 @@
 #include <iostream>
-#include <wchar.h>
-#include <locale.h>
+#include <clocale>
+#include <cwchar>
 
 using namespace std;
 
 int main() {
-    setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "Portuguese-Brazilian");
 
     int A[10], B[10], x;
     

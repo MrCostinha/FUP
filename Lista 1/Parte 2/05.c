@@ -1,15 +1,15 @@
 #include <stdio.h>
-#include <wchar.h>
 #include <locale.h>
+#include <wchar.h>
 
 int main() {
-    setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "Portuguese-Brazilian");
 
     float numero, i = 0, soma = 0;
 
     wprintf(L"Números reais: \n");
     
-    while (numero!=0) {
+    while (numero != 0) {
         scanf("%f", &numero);
         if (numero!=0){
             soma += numero;

@@ -11,7 +11,7 @@ int main() {
 
     for (int i = 1; i <= 100; i++) {
         numero = rand()%2;
-        if (numero==0) {
+        if (numero == 0) {
             caras++;
         } else {
             coroas++;

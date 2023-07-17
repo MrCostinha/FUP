@@ -1,6 +1,6 @@
 #include <iostream>
-#include <wchar.h>  // Caracteres
-#include <locale.h> // em pt-br
+#include <clocale>
+#include <cwchar>
 
 using namespace std;
 
@@ -12,7 +12,7 @@ void trocaEndereco(int* endereco1, int* endereco2) {
 }
 
 int main() {
-    setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "Portuguese-Brazilian"); 
 
     int numero1, numero2;
 

@@ -1,14 +1,14 @@
 #include <iostream>
-#include <wchar.h>
-#include <locale.h>
+#include <clocale>
+#include <cwchar>
 #include <cstdlib>
-#include <time.h>
+#include <ctime>
 #include <string>
 
 using namespace std;
 
 int main() {
-    setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "Portuguese-Brazilian");
     srand(time(NULL));
 
     string maiusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";

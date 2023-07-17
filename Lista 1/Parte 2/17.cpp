@@ -35,8 +35,8 @@ int main() {
 
     wcout << L"Cartela de Bingo:" << endl;
     
-    for (int k = 0; k < 5; k++) {
-        cout << numero[k] << " ";
+    for (int i = 0; i < 5; i++) {
+        cout << numero[i] << " ";
     }
 
     return 0;

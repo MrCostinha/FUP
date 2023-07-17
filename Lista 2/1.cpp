@@ -1,8 +1,8 @@
 /*1. Desenvolva uma função que receba como parâmetros as coordenadas x e y de 3 pontos e retorne qual
 a maior distância entre eles.*/
 #include <iostream>
-#include <wchar.h>
-#include <locale.h>
+#include <clocale>
+#include <cwchar>
 #include <cmath>
 
 using namespace std;
@@ -26,7 +26,7 @@ int maior_distancia(float x1, float y1, float x2, float y2, float x3, float y3) 
 }
 
 int main() {
-    setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "Portuguese-Brazilian");
 
     float x1, y1, x2, y2, x3, y3;
 

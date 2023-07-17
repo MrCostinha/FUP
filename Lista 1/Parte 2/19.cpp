@@ -1,13 +1,13 @@
 #include <iostream>
+#include <clocale>
 #include <cwchar>
-#include <locale.h>
 #include <cstdlib>
 #include <ctime>
 
 using namespace std;
 
 int main() {
-    setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "Portuguese-Brazilian");
     srand(time(NULL));
 
     int pc, usuario, wins_pc = 0, wins_usuario = 0;
@@ -20,14 +20,14 @@ int main() {
 
         if (usuario==1 && pc==2 || usuario==2 && pc==3 || usuario==3 && pc==1) {
             wins_pc++;
-        }else if (usuario==1 && pc==3 || usuario==2 && pc==1 || usuario==3 && pc==2) {
+        } else if (usuario==1 && pc==3 || usuario==2 && pc==1 || usuario==3 && pc==2) {
             wins_usuario++;
         }
-    } while (wins_pc < 5 && wins_usuario < 5);
+    } while (wins_pc<5 && wins_usuario<5);
 
     if (wins_pc == 5) {
         cout << "O computador venceu!";
-    }else if (wins_usuario == 5) {
+    } else if (wins_usuario == 5) {
         wcout << L"Você venceu!";
     }
 

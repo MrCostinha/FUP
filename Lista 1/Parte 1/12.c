@@ -1,9 +1,9 @@
 #include <stdio.h>
-#include <wchar.h>
 #include <locale.h>
+#include <wchar.h>
 
 int main() {
-    setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "Portuguese-Brazilian");
     
     float preco, acres_decres;
     int vendas;
@@ -13,22 +13,17 @@ int main() {
     printf("Vendas: ");
     scanf("%d", &vendas);
 
-    if (vendas<500) {
+    if (vendas < 500) {
         acres_decres = preco*(-0.1);
         preco += acres_decres;
-
         wprintf(L"\nNovo preço: R$ %.2f", preco);
-    }
-    else if (vendas<1200) {
+    } else if (vendas < 1200) {
         acres_decres = preco*0.05;
         preco += acres_decres;
-
         wprintf(L"\nNovo preço: R$ %.2f", preco);
-    }
-    else {
+    } else {
         acres_decres = preco*0.2;
         preco += acres_decres;
-        
         wprintf(L"\nNovo preço: R$ %.2f", preco);
     }
 

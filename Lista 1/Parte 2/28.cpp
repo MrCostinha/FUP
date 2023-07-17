@@ -1,11 +1,11 @@
 #include <iostream>
-#include <wchar.h>
-#include <locale.h>
+#include <clocale>
+#include <cwchar>
 
 using namespace std;
 
 int main() {
-    setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "Portuguese-Brazilian");
 
     int n;
 
@@ -14,10 +14,10 @@ int main() {
 
     for (int linha = 0; linha < n; linha++) {
         for (int coluna = 0; coluna < n; coluna++) {
-            if (linha == 0 || linha == n - 1) {
+            if (linha == 0 || linha == n-1) {
                 cout << "* ";
             } else {
-                if (coluna == 0 || coluna == n - 1) {
+                if (coluna == 0 || coluna == n-1) {
                     cout << "* ";
                 } else {
                     cout << "  ";

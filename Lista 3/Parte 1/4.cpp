@@ -1,7 +1,7 @@
 #include <iostream>
-#include <wchar.h>
-#include <locale.h>
-#include <cstring> // string
+#include <clocale>
+#include <cwchar>
+#include <cstring>
 
 using namespace std;
 
@@ -19,7 +19,7 @@ char alteraCaractere(char* endereco, int x) {
 }
 
 int main() {
-    setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "Portuguese-Brazilian");
 
     char* ptr = new char;
     int x;

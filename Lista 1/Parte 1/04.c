@@ -1,9 +1,9 @@
 #include <stdio.h>
-#include <wchar.h>
 #include <locale.h>
+#include <wchar.h>
 
 int main() {
-    setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "Portuguese-Brazilian");
     
     int num1, num2, diferenca;
 
@@ -12,7 +12,7 @@ int main() {
 
     diferenca = num1-num2;
 
-    if (diferenca<0) {
+    if (diferenca < 0) {
         diferenca *= -1;
     }
 

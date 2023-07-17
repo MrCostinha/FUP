@@ -1,8 +1,8 @@
 /*3. Faça uma função que receba como parâmetro 3 números inteiros e retorne o MMC (Mínimo Múltiplo
 Comum) deles.*/
 #include <iostream>
-#include <wchar.h>
-#include <locale.h>
+#include <clocale>
+#include <cwchar>
 
 using namespace std;
 
@@ -20,7 +20,7 @@ int mmc(int n1, int n2, int n3) {
 }
 
 int main() {
-    setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "Portuguese-Brazilian");
 
     int n1, n2, n3;
 

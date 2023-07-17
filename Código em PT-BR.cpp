@@ -1,6 +1,6 @@
 #include <iostream>
-#include <cwchar>
 #include <clocale>
+#include <cwchar>
 
 using namespace std;
 

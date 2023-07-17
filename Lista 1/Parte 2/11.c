@@ -1,9 +1,9 @@
 #include <stdio.h>
-#include <wchar.h>
 #include <locale.h>
+#include <wchar.h>
 
 int main() {
-    setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "Portuguese-Brazilian");
     
     int numero_original, numero, inverso = 0, count = 0;
 
@@ -22,8 +22,7 @@ int main() {
 
     if (numero_original == inverso){
         wprintf(L"\n%d é palíndromo", numero_original);
-    }
-    else {
+    } else {
         wprintf(L"\n%d não é palíndromo", numero_original);
     }
     

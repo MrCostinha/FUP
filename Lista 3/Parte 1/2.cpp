@@ -1,8 +1,8 @@
 #include <iostream>
-#include <wchar.h>
-#include <locale.h>
-#include <cstdlib> // Números
-#include <ctime>   // Aleatórios
+#include <clocale>
+#include <cwchar>
+#include <cstdlib>
+#include <ctime>
 #include <cstdint> // uintptr_t
 
 using namespace std;
@@ -26,7 +26,7 @@ void sorteio(int* endereco) {
 }
 
 int main() {
-    setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "Portuguese-Brazilian");
 
     int* ptr = new int;
 

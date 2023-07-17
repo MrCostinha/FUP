@@ -1,10 +1,10 @@
 #include <stdio.h>
-#include <wchar.h>
 #include <locale.h>
+#include <wchar.h>
 
 int main() {
-    setlocale(LC_ALL, "");
-    
+    setlocale(LC_ALL, "Portuguese-Brazilian");
+
     float n1, n2, n3, p1, p2, p3, media;
 
     printf("1ª nota e seu peso: ");

@@ -1,6 +1,6 @@
 #include <iostream>
-#include <wchar.h>
-#include <locale.h>
+#include <clocale>
+#include <cwchar>
 #include <cmath>
 
 using namespace std;
@@ -20,7 +20,7 @@ void adiciona_ao_endereco(int qtd_par, int* endereco1, int* endereco2) {
 }
 
 int main() {
-    setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "Portuguese-Brazilian");
 
     int x;
     int* ptr1 = new int;

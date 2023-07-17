@@ -1,7 +1,7 @@
 /*5. Desenvolva uma função que receba um número inteiro qualquer e retorne a soma dos seus algarismos.*/
 #include <iostream>
-#include <wchar.h>
-#include <locale.h>
+#include <clocale>
+#include <cwchar>
 
 using namespace std;
 
@@ -15,7 +15,7 @@ int somaAlgarismos(int x) {
 }
 
 int main() {
-    setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "Portuguese-Brazilian");
 
     int numero;
 

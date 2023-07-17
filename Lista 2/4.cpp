@@ -1,8 +1,8 @@
 /*4. Desenvolva uma função que receba 2 números inteiros a e b e imprima na tela todos os números
 primos de a até b. Considere a < b.*/
 #include <iostream>
-#include <wchar.h>
-#include <locale.h>
+#include <clocale>
+#include <cwchar>
 
 using namespace std;
 
@@ -22,7 +22,7 @@ bool ehPrimo(int x){
 }
 
 int main() {
-    setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "Portuguese-Brazilian");
 
     int a, b, aux;
 

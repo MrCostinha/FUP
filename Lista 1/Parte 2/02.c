@@ -1,18 +1,17 @@
 #include <stdio.h>
-#include <wchar.h>
 #include <locale.h>
+#include <wchar.h>
 
 int main() {
-    setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "Portuguese-Brazilian");
 
-    int i = 1, x, soma = 0;
+    int x, soma = 0;
 
     wprintf(L"Número natural: ");
     scanf("%d", &x);
 
-    while (i<=x) {
+    for (int i = 1; i <= x; i++) {
         soma += i;
-        i++;
     }
 
     printf("Soma dos naturais de 1 a %d: %d", x, soma);
